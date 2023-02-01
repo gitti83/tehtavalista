@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    background-color: #d8c3a5;
+    color: #5f5e5c;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+
+/*HEADER
+========
+Sivun otsikolle annetut tyyliohjeet*/
+header {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/*FORM 
+======
+Tässä alkaa lomakkeen (form) elementin tyylitys*/
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button {
+  padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    color: #5f5e5c;
+    background: white;
+}
+form button {
+    background: #bba688;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form button:hover {
+  background: #EAE7DC;
+  color: white;
+}
+
+/*TODO
+======
+Tähän tulee Tehtävälistan (todo) elementin tyylitiedot*/
+.fas.fa-plus-circle:before {
+  color: #5f5e5c;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*TODO-LIST
+===========
+Se lista jonne ilmestyy tehtävät asiat, ja jossa voit laittaa nimet joko suoritetuksi tai voit poistaa ne.
+Tämä siis kattaa sen koko listan ei yksittäisiä nimiä*/
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+/*TODO
+======
+Tällä muokataan sen listan yksittäisiä tehtäviä.*/
+.todo {
+  margin: 0.5rem;
+  background: white;
+  font-size: 1.5rem;
+  color: #5f5e5c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+}
+
+/*FILTER 
+========
+Tämä on se valikko/suodatin josta valitaan Näytä kaikki, Suoritettu, Ei suoritettu.*/
+.filter-todo {
+  padding: 1rem;
+}
+
+/*TODO LI
+=========
+Tämä on se lista joka ilmestyy kun syötät tehtäviä tai tarkemmin ottaen se listan tyylitys*/
+.todo li {
+  flex: 1;
+}
+
+.trash-btn {
+  background: #bba688;
+    color: #5f5e5c;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.trash-btn:hover {
+  background: #EAE7DC;
+  color: white;
+  
+}
+
+.complete-btn {
+  background: #bba688;
+    color: #5f5e5c;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+
+.complete-btn:hover {
+  background: #EAE7DC;
+  color: white;
+  /* transform: scale(1.0); */
+
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.completed {
+  text-decoration: line-through #5f5e5c;
+  text-decoration-thickness: 0.1rem;
+}
+
+select {
+  color: #5f5e5c;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    width: 12rem;
+    font-size: 1rem;
+    background-color: white;
+}
+
+/*CUSTOM SELECTOR */
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+  
+}
+
+/* Custom Select */
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Valikon nuoli */
+.select::after {
+  color: #5f5e5c;
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    background: #bba688;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+/* Hovering efekti valikkonapille */
+.select:hover::after {
+  transform: scale(1.0);
+  background: #EAE7DC;
+}
